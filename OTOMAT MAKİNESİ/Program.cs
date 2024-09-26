@@ -6,32 +6,33 @@ namespace OTOMAT_MAKİNESİ
     {
         static void Main(string[] args)
         {
-            /* PERŞEMBE
+                    /* PERŞEMBE
 
-     Müşteri Daha önceden tanımlanmış bir ürün listesinden bir ürün seçecek. 
-    Para girişi yapacak. Girilen para seçilen ürünün fiyatını karşılar ise ürün alındı, aksi durumda para ekle seçeneği ile tekrar para girmesi sağlanacak.
+ Müşteri Daha önceden tanımlanmış bir ürün listesinden bir ürün seçecek. 
+Para girişi yapacak. Girilen para seçilen ürünün fiyatını karşılar ise ürün alındı, aksi durumda para ekle seçeneği ile tekrar para girmesi sağlanacak.
 
-     // Admin => Ürün Ekleyecek, Ürün Silecek, Fiyat Güncelleyecek
+ // Admin => Ürün Ekleyecek, Ürün Silecek, Fiyat Güncelleyecek
 
-          */
-            
-            string[] ürünler = { "COLA", "FANTA", "AYRAN" };
-            string yeniÜrün = "";
+      */
+        
+        string[] ürünler = { "COLA", "FANTA", "AYRAN" };
+        string yeniÜrün = "";
 
-            int cola = 10;
-            int fanta = 20;
-            int ayran = 30;
-            
-            int[] ürünFiyatları = { cola, fanta, ayran };
-            int yeniÜrünFiyatı = 0;
-            int güccelenecekÜrünFiyatı = 0;
+        int cola = 10;
+        int fanta = 20;
+        int ayran = 30;
+        
+        int[] ürünFiyatları = { cola, fanta, ayran };
+        int yeniÜrünFiyatı = 0;
+        int güccelenecekÜrünFiyatı = 0;
 
 
-        ANAMENU:
+        while (true)
+        {
             Console.WriteLine("ürünlerin eleman uzuunluğu:" + ürünler.Length);
-           
+
             Console.WriteLine("ne istersiniz:");
-            string cevap =Console.ReadLine().ToUpper();
+            string cevap = Console.ReadLine().ToUpper();
             if (cevap == ürünler[0])
             {
                 Console.WriteLine($"ÜRÜN FİYATI:{ürünFiyatları[0]}TL");
@@ -41,7 +42,7 @@ namespace OTOMAT_MAKİNESİ
                 while (ürünFiyatları[0] < ürünFiyatları[0])
                 {
                     int eklenecekPara = ürünFiyatları[0] - girilenPara;
-                BİRONCEKİ_İSLEM:
+                
                     Console.WriteLine("bakiye yetersi!!.para ekleme-1\nANAMENÜ-2");
                     int islem = Convert.ToInt32(Console.ReadLine());
 
@@ -50,26 +51,28 @@ namespace OTOMAT_MAKİNESİ
                         Console.WriteLine("PARA GİRİNİZ");
                         eklenecekPara = Convert.ToInt32(Console.ReadLine());
                         girilenPara += eklenecekPara;
+                        continue;
 
 
                     }
                     else if (islem == 2)
                     {
-                        goto ANAMENU;
+                        break;
                     }
                     else
                     {
                         Console.WriteLine("hatalı işlem");
-                        goto BİRONCEKİ_İSLEM;
+                        continue;
+                            
                     }
-                    break;
+                    
 
                 }
                 while (girilenPara >= ürünFiyatları[0])
                 {
                     int paraÜstü = girilenPara - ürünFiyatları[0];
                     Console.WriteLine($"afiyetolsun,para üstü:{paraÜstü}TL");
-                    goto ANAMENU;
+                    break;
 
                 }
 
@@ -83,7 +86,7 @@ namespace OTOMAT_MAKİNESİ
                 while (girilenPara < ürünFiyatları[1])
                 {
                     int eklenecekPara = ürünFiyatları[1] - girilenPara;
-                BİRONCEKİ_İSLEM:
+                
                     Console.WriteLine("bakiye yetersi!!.para ekleme-1\nANAMENÜ-2");
                     int islem = Convert.ToInt32(Console.ReadLine());
 
@@ -92,26 +95,27 @@ namespace OTOMAT_MAKİNESİ
                         Console.WriteLine("PARA GİRİNİZ");
                         eklenecekPara = Convert.ToInt32(Console.ReadLine());
                         girilenPara += eklenecekPara;
+                        continue;
 
 
                     }
                     else if (islem == 2)
                     {
-                        goto ANAMENU;
+                        break;
                     }
                     else
                     {
                         Console.WriteLine("hatalı işlem");
-                        goto BİRONCEKİ_İSLEM;
+                        continue;
                     }
-                    break;
+                    
 
                 }
                 while (girilenPara >= ürünFiyatları[1])
                 {
                     int paraÜstü = girilenPara - fanta;
                     Console.WriteLine($"afiyetolsun,para üstü:{paraÜstü}TL");
-                    goto ANAMENU;
+                    break;
 
                 }
 
@@ -125,7 +129,7 @@ namespace OTOMAT_MAKİNESİ
                 while (girilenPara < ürünFiyatları[2])
                 {
                     int eklenecekPara = ürünFiyatları[2] - girilenPara;
-                BİRONCEKİ_İSLEM:
+                
                     Console.WriteLine("bakiye yetersi!!.para ekleme-1\nANAMENÜ-2");
                     int islem = Convert.ToInt32(Console.ReadLine());
 
@@ -134,26 +138,27 @@ namespace OTOMAT_MAKİNESİ
                         Console.WriteLine("PARA GİRİNİZ");
                         eklenecekPara = Convert.ToInt32(Console.ReadLine());
                         girilenPara += eklenecekPara;
+                        continue;
 
 
                     }
                     else if (islem == 2)
                     {
-                        goto ANAMENU;
+                        break;
                     }
                     else
                     {
                         Console.WriteLine("hatalı işlem");
-                        goto BİRONCEKİ_İSLEM;
+                        continue;
                     }
-                    break;
+                    
 
                 }
                 while (girilenPara >= ürünFiyatları[2])
                 {
                     int paraÜstü = girilenPara - ürünFiyatları[2];
                     Console.WriteLine($"afiyetolsun,para üstü:{paraÜstü}TL");
-                    goto ANAMENU;
+                    break;
 
                 }
 
@@ -168,7 +173,7 @@ namespace OTOMAT_MAKİNESİ
                 while (girilenPara < yeniÜrünFiyatı)
                 {
                     int eklenecekPara = yeniÜrünFiyatı - girilenPara;
-                BİRONCEKİ_İSLEM:
+                
                     Console.WriteLine("bakiye yetersi!!.para ekleme-1\nANAMENÜ-2");
                     int islem = Convert.ToInt32(Console.ReadLine());
 
@@ -177,26 +182,27 @@ namespace OTOMAT_MAKİNESİ
                         Console.WriteLine("PARA GİRİNİZ");
                         eklenecekPara = Convert.ToInt32(Console.ReadLine());
                         girilenPara += eklenecekPara;
+                        continue;
 
 
                     }
                     else if (islem == 2)
                     {
-                        goto ANAMENU;
+                        break;
                     }
                     else
                     {
                         Console.WriteLine("hatalı işlem");
-                        goto BİRONCEKİ_İSLEM;
+                        continue;
                     }
-                    break;
+                   
 
                 }
                 while (girilenPara >= yeniÜrünFiyatı)
                 {
                     int paraÜstü = girilenPara - yeniÜrünFiyatı;
                     Console.WriteLine($"afiyetolsun,para üstü:{paraÜstü}TL");
-                    goto ANAMENU;
+                    break;
 
                 }
             }
@@ -205,7 +211,7 @@ namespace OTOMAT_MAKİNESİ
                 int islem = 0;
                 while (true)
                 {
-                    
+
                     try
                     {
                         Console.WriteLine("ürün eklemek için-1\nürün silmek için-2\nürün güncellemek için-3\nürün listelemek için-4");
@@ -217,7 +223,7 @@ namespace OTOMAT_MAKİNESİ
                         Console.WriteLine("rakam giriniz");
                     }
                 }
-               
+
                 if (islem == 1)
                 {
 
@@ -228,8 +234,8 @@ namespace OTOMAT_MAKİNESİ
                     ürünler[ürünler.Length - 1] = yeniÜrün;
                     Console.WriteLine("eklemek istediğiniz ürününün fiyatını  girin");
                     yeniÜrünFiyatı = Convert.ToInt32(Console.ReadLine());
-                    ürünFiyatları[ürünFiyatları.Length-1]=yeniÜrünFiyatı;
-                    goto ANAMENU;
+                    ürünFiyatları[ürünFiyatları.Length - 1] = yeniÜrünFiyatı;
+                    continue;
 
 
                 }
@@ -250,7 +256,7 @@ namespace OTOMAT_MAKİNESİ
                         Console.WriteLine($"index no:{index}" + item);
                         index++;
                     }
-                    goto ANAMENU;
+                    continue;
 
 
                 }
@@ -279,7 +285,7 @@ namespace OTOMAT_MAKİNESİ
                         Console.WriteLine($"index no:{index}" + item);
                         index++;
                     }
-                    goto ANAMENU;
+                    continue;
                 }
                 else if (islem == 4)
                 {
@@ -290,16 +296,18 @@ namespace OTOMAT_MAKİNESİ
                         Console.WriteLine(item);
 
                         Console.WriteLine($"{ürünFiyatları[n]}TL");
-                            n++;
+                        n++;
 
                     }
                 }
                 else
                 {
                     Console.WriteLine("hatalı işlem");
-                    goto ANAMENU;
+                    continue ;
                 }
             }
+
+        }
 
 
 
