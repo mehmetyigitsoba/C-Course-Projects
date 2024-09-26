@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BANKAMATİK", "BANKAMATİK\BANKAMATİK.csproj", "{A15F8A1E-CE18-4876-88D7-52CC518F3978}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTOMAT MAKİNESİ", "OTOMAT MAKİNESİ\OTOMAT MAKİNESİ.csproj", "{F7FF5287-2110-4613-8B57-55749703104F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A15F8A1E-CE18-4876-88D7-52CC518F3978}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A15F8A1E-CE18-4876-88D7-52CC518F3978}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A15F8A1E-CE18-4876-88D7-52CC518F3978}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7FF5287-2110-4613-8B57-55749703104F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7FF5287-2110-4613-8B57-55749703104F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7FF5287-2110-4613-8B57-55749703104F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7FF5287-2110-4613-8B57-55749703104F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
