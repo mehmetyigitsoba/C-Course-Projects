@@ -6,7 +6,7 @@ namespace OTOMAT_MAKİNESİ
     {
         static void Main(string[] args)
         {
-                               /* PERŞEMBE
+                                                            /* PERŞEMBE
 
 Muşteri Daha önceden tanımlanmış bir urun listesinden bir urun seçecek. 
 Para girişi yapacak. Girilen para seçilen urunun fiyatını karşılar ise urun alındı, aksi durumda para ekle seçeneği ile tekrar para girmesi sağlanacak.
@@ -27,6 +27,15 @@ Para girişi yapacak. Girilen para seçilen urunun fiyatını karşılar ise uru
             while (true)
             {
                 Console.WriteLine("urunlerin eleman uzuunluğu:" + urunler.Length);
+                int m = 0;
+                foreach (var item in urunler)
+                {
+                    Console.WriteLine(item);
+
+                    Console.WriteLine($"{urunFiyatları[m]}TL");
+                    m++;
+
+                }
 
                 Console.WriteLine("ne istersiniz:");
                 string cevap = Console.ReadLine().ToUpper();
@@ -232,26 +241,42 @@ Para girişi yapacak. Girilen para seçilen urunun fiyatını karşılar ise uru
                         Console.WriteLine("eklemek istediğiniz urununun fiyatını  girin");
                         yeniUrunFiyatı = Convert.ToInt32(Console.ReadLine());
                         urunFiyatları[urunFiyatları.Length - 1] = yeniUrunFiyatı;
+                        int n = 0;
+                        foreach (var item in urunler)
+                        {
+                            Console.WriteLine(item);
+
+                            Console.WriteLine($"{urunFiyatları[n]}TL");
+                            n++;
+
+                        }
                         continue;
 
 
                     }
                     else if (islem == 2)
                     {
-                        int index = 0;
+                        int n = 0;
                         foreach (var item in urunler)
                         {
-                            Console.WriteLine($"index no:{index}" + item);
-                            index++;
+                            Console.WriteLine(item);
+
+                            Console.WriteLine($"{urunFiyatları[n]}TL");
+                            n++;
+
                         }
                         Console.WriteLine("silinecek urunun index no:");
                         int silinecekUrun = Convert.ToInt32(Console.ReadLine());
                         Array.Clear(urunler, silinecekUrun, 1);
-                        index = 0;
+                        
+                         n = 0;
                         foreach (var item in urunler)
                         {
-                            Console.WriteLine($"index no:{index}" + item);
-                            index++;
+                            Console.WriteLine(item);
+
+                            Console.WriteLine($"{urunFiyatları[n]}TL");
+                            n++;
+
                         }
                         continue;
 
@@ -259,12 +284,14 @@ Para girişi yapacak. Girilen para seçilen urunun fiyatını karşılar ise uru
                     }
                     else if (islem == 3)
                     {
-                        int index = 0;
-
+                        int n = 0;
                         foreach (var item in urunler)
                         {
-                            Console.WriteLine($"index no:{index}" + item);
-                            index++;
+                            Console.WriteLine(item);
+
+                            Console.WriteLine($"{urunFiyatları[n]}TL");
+                            n++;
+
                         }
                         Console.WriteLine("guncellemek isteğiniz urununun index no:");
                         int guncellenecekUrun = Convert.ToInt32(Console.ReadLine());
@@ -275,12 +302,14 @@ Para girişi yapacak. Girilen para seçilen urunun fiyatını karşılar ise uru
                         urunFiyatları[guccelenecekUrunFiyatı] = Convert.ToInt32(Console.ReadLine());
 
 
-                        index = 0;
-
+                       n = 0;
                         foreach (var item in urunler)
                         {
-                            Console.WriteLine($"index no:{index}" + item);
-                            index++;
+                            Console.WriteLine(item);
+
+                            Console.WriteLine($"{urunFiyatları[n]}TL");
+                            n++;
+
                         }
                         continue;
                     }
